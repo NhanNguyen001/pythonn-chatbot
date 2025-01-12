@@ -11,6 +11,8 @@ fastapi = "*"
 sqlalchemy = "*"
 uvicorn = "*"
 python-multipart = "*"
+aiofiles = "*"
+jinja2 = "*"
 
 [dev-packages]
 

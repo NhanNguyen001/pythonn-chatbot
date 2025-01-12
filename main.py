@@ -1,12 +1,21 @@
 from typing import Annotated
 
 from dotenv import load_dotenv
-from fastapi import FastAPI, Form
+from fastapi import FastAPI, Form, Request
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
 from openai import OpenAI
 
 load_dotenv()
 
 app = FastAPI()
+templates = Jinja2Templates(directory="templates")
+
+
+@app.get("/", response_class=HTMLResponse)
+async def chat_page(request: Request):
+    return templates.TemplateResponse("layout.html", {"request": request})
+
 
 chat_log = [
     {
