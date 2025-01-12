@@ -5,20 +5,22 @@ load_dotenv()
 
 if __name__ == "__main__":
     openai = OpenAI()
-    response = openai.chat.completions.create(
-        model="gpt-4o",
-        messages=[
-            {"role": "system", "content": "You are the CEO of Apple."},
-            # {
-            #     "role": "assistant",
-            #     "content": "The Spurs won the 2005 NBA Championship.",
-            # },
-            {
-                "role": "user",
-                "content": "Who was on the team?",
-            },
-        ],
-    )
-    # response.choices[0].message.content
+    chat_log = []
+    while True:
+        user_input = input()
+        if user_input.lower() == "stop":
+            break
 
-    print(response.choices[0].message.content)
+        chat_log.append({"role": "user", "content": user_input})
+
+        response = openai.chat.completions.create(
+            model="gpt-4o",
+            messages=chat_log,
+            temperature=0.6,
+        )
+
+        bot_response = response.choices[0].message.content
+
+        chat_log.append({"role": "assistant", "content": bot_response})
+
+        print(bot_response)
