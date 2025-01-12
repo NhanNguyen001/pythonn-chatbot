@@ -1,0 +1,64 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs and debug files
+*.log
+*.out
+*.err
+
+# Python cache
+*.pytest_cache/
+.cache/
+
+# Environment variables
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDEs and text editor settings
+.idea/
+*.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# OS system files
+.DS_Store
+Thumbs.db
+
+# SQLite database files
+*.sqlite3
+*.db
+
+# Test reports
+coverage.xml
+*.cover
+.hypothesis/
+*.coveragerc
+
+# PyInstaller files
+*.spec
+
+# Sphinx documentation
+docs/_build/
+
+# MyPy cache
+.mypy_cache/
+
+# Pylint reports
+pylint-results.xml
