@@ -14,7 +14,7 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def chat_page(request: Request):
-    return templates.TemplateResponse("layout.html", {"request": request})
+    return templates.TemplateResponse("home.html", {"request": request})
 
 
 chat_log = [
