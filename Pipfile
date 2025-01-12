@@ -5,6 +5,11 @@ name = "pypi"
 
 [packages]
 black = "*"
+openai = "*"
+python-dotenv = "*"
+fastapi = "*"
+sqlalchemy = "*"
+uvicorn = "*"
 
 [dev-packages]
 
